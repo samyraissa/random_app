@@ -1,0 +1,24 @@
+.player {
+  position: absolute;
+  background-color: #FFD700; /* Gold-yellow, friendly */
+  border-radius: 50%; /* Keep it round */
+  transition: top 0.1s linear, left 0.1s linear;
+  box-shadow: 0 0 5px #FFD700, 0 0 10px #FFC400; /* Soft glow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simple eye for the player */
+.player-eye {
+  width: 20%;
+  height: 20%;
+  background-color: #333; /* Dark eye */
+  border-radius: 50%;
+  position: relative; /* Positioned towards one side to indicate direction (optional) */
+  /* For a simple centered eye, remove left/right and just center with flex */
+  /* left: 25%; */ 
+}
+
+/* Example for a Pac-Man like mouth - this would require more complex animation/state */
+/* .player-mouth { ... } */

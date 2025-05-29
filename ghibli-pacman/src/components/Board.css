@@ -1,0 +1,58 @@
+.game-board {
+  position: relative;
+  margin: auto;
+  background-color: #6B8E23; /* OliveDrab - an earthy, Ghibli-esque green for paths */
+  border: 3px solid #556B2F; /* DarkOliveGreen border for the board */
+  overflow: hidden; /* Ensure rounded corners of walls look good at edges */
+}
+
+.tile {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall {
+  background-color: #8FBC8F; /* DarkSeaGreen - softer than plain blue */
+  border: 1px solid #556B2F; /* DarkOliveGreen to match board border */
+  border-radius: 30%; /* Rounded 'stones' or 'hedges' */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2); /* Subtle inner shadow for depth */
+}
+
+/* Path tiles will inherit the board's background color by default */
+/* We only need to style the collectibles on them */
+
+.dot-collectible {
+  width: 25%; /* Relative to TILE_SIZE */
+  height: 25%;
+  background-color: #FFFACD; /* LemonChiffon - soft yellow dot */
+  border-radius: 50%;
+  box-shadow: 0 0 3px #FAFAD2, 0 0 6px #EEE8AA; /* Soft glow */
+}
+
+.power-fruit-collectible {
+  width: 60%; /* Relative to TILE_SIZE */
+  height: 60%;
+  background-color: #FFB6C1; /* LightPink - for a magical fruit */
+  border-radius: 50%;
+  border: 2px solid #FF69B4; /* HotPink border */
+  box-shadow: 0 0 8px #FFC0CB, 0 0 12px #FF69B4; /* Brighter glow */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
